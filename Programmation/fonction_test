@@ -1,0 +1,7 @@
+def asRowMatrix(X):
+	if len(X) == 0:
+		return np.array([])
+	mat = np.empty((0, X[1].size), dtype=X[1].dtype)
+	for row in X:
+		mat = np.vstack((mat, np.asarray(row).reshape(1,-1)))
+	return mat
